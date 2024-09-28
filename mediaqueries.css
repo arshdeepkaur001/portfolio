@@ -53,10 +53,13 @@
   footer {
     height: 40vh;
   }
+  #about-link{
+    display: none;
+  }
   #about {
     height: 83vh;
     margin-bottom: 0;
-    margin-top: 8vh;
+    margin-top: 9vh;
     padding: 0px;
   }
   .hamburger-icon {
