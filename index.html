@@ -7,6 +7,8 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+
+
     <script>
       function toggleMenu() {
         const menu = document.querySelector(".menu-links");
@@ -15,22 +17,31 @@
         icon.classList.toggle("open");
       }
     </script>
+
+    
   </head>
   <body>
     <!-- ------------------NAVBAR------------------------------ -->
     <nav id="desktop-nav">
-      <div class="logo">Arshdeep Kaur</div>
+      <div class="logo">
+  <img src="assets/logo2.png" alt="Logo" class="logo-img" />
+</div>
       <div>
+        <!-- Desktop -->
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#certificates">Certificates</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
     <nav id="hamburger-nav">
-      <div class="logo">Arshdeep Kaur</div>
+     <div class="logo">
+  <img src="assets/logo2.png" alt="Logo" class="logo-img" />
+</div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -40,22 +51,23 @@
         <div class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#certificates" onclick="toggleMenu()">Certificates</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
       </div>
     </nav>
     <!-- ----------------ABOUT SECTION--------------------------------- -->
     <section id="about">
-      <p class="section__text__p1">Frontend Developer</p>
-      <h1 class="title">Arshdeep Kaur</h1>
+      <p class="section__text__p1">
+        Aspiring Full-Stack Web Developer | MERN Stack | Flutter | CSE Graduate-24
+      </p>
+      <h1 class="title"><span class="dynamic-title" id="name-about"></span></h1>
+
       <div class="section-container">
         <div class="section__pic-container">
-          <img
-            src="./assets/pp.jpg"
-            alt="Profile picture"
-            class="about-pic"
-          />
+          <img src="./assets/pp.jpg" alt="Profile picture" class="about-pic" />
         </div>
         <div class="about-details-container">
           <div class="about-containers">
@@ -93,10 +105,7 @@
             </p>
           </div>
           <div class="btn-container">
-            <button
-              class="btn btn-color-2"
-              onclick="window.open('./assets/CV.pdf')"
-            >
+            <button class="btn btn-color-2" onclick="window.open('./assets')">
               Download CV
             </button>
             <button
@@ -107,6 +116,7 @@
             </button>
           </div>
         </div>
+        
       </div>
       <img
         src="./assets/arrow.png"
@@ -334,6 +344,72 @@
         onclick="location.href='./#projects'"
       />
     </section>
+    <!-- ------------------SKILLS SECTION------------------------------ -->
+    <section id="skills">
+      <p class="section__text__p1">What I Know</p>
+      <h1 class="title">Skills</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Languages & Tools</h2>
+            <div class="article-container">
+              <article><h3>HTML, CSS, JavaScript</h3></article>
+              <article><h3>Dart, C++</h3></article>
+              <article><h3>GitHub, VS Code, Postman</h3></article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frameworks & Libraries</h2>
+            <div class="article-container">
+              <article><h3>React.js, Node.js, Express.js</h3></article>
+              <article><h3>Flutter</h3></article>
+              <article><h3>Bootstrap, jQuery</h3></article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Databases & OS</h2>
+            <div class="article-container">
+              <article><h3>MySQL, MongoDB</h3></article>
+              <article><h3>Windows, Linux</h3></article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ------------------CERTIFICATES SECTION------------------------------ -->
+    <section id="certificates">
+      <p class="section__text__p1">My Achievements</p>
+      <h1 class="title">Certificates</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <h3>Frontend Developer Intern - IIT Ropar</h3>
+            <a
+              href="https://drive.google.com/file/d/1UFivyTkR_0oRtjmu5iOws1cxldPvIxGS/view?usp=sharing"
+              target="_blank"
+              >View Certificate</a
+            >
+          </div>
+          <div class="details-container color-container">
+            <h3>Full Stack Web Development - BCE</h3>
+            <a
+              href="https://drive.google.com/file/d/1tkbrbMYyDvRLO90af7sPHOkpy0C2a17D/view?usp=drive_link"
+              target="_blank"
+              >View Certificate</a
+            >
+          </div>
+          <div class="details-container color-container">
+            <h3>MERN Stack Development - Infowiz</h3>
+            <a
+              href="https://drive.google.com/file/d/1QBKDrt4wTdQtTDX2X4Ej-zSVnresG4iV/view?usp=drive_link"
+              target="_blank"
+              >View Certificate</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ------------------PROJECTS SECTION------------------------------------ -->
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
@@ -466,5 +542,25 @@
         </div>
       </nav>
     </footer>
+    <script>
+      const nameText = "Arshdeep Kaur";
+
+      function typeWriter(id, text, speed) {
+        let i = 0;
+        const element = document.getElementById(id);
+        function typing() {
+          if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typing, speed);
+          }
+        }
+        typing();
+      }
+
+      window.onload = () => {
+        typeWriter("name-about", nameText, 120);
+      };
+    </script>
   </body>
 </html>
