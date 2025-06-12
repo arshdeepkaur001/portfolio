@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+
 * {
   margin: 0;
   padding: 0;
@@ -37,7 +38,7 @@ nav {
 .nav-links {
   gap: 2rem;
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 a {
@@ -421,4 +422,44 @@ footer {
 
 footer p {
   text-align: center;
+}
+.dynamic-title {
+  font-weight: 700;
+  font-size: 3rem;
+  background: linear-gradient(90deg, #565d64, #574c4c8d);
+
+  /* Text fill effect */
+  -webkit-background-clip: text;   /* For Safari, Chrome */
+  -moz-background-clip: text;      /* For Firefox (experimental) */
+  background-clip: text;           /* Standard syntax */
+
+  -webkit-text-fill-color: transparent;  /* For Safari, Chrome */
+  -moz-text-fill-color: transparent;     /* Firefox (non-standard, fallback) */
+  color: transparent;                    /* Standard fallback */
+
+  display: inline-block;
+  position: relative;
+}
+
+.dynamic-title::after {
+  content: '|';
+  position: absolute;
+  right: -10px;
+  color: #100203;
+  animation: blink 0.7s infinite;
+}
+
+
+.logo-img {
+  height: 70px; /* Adjust as needed */
+  width: auto;
+  margin: 3%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.1));
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
