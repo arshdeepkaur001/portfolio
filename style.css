@@ -68,8 +68,11 @@ a:hover {
 }
 
 .hamburger-menu {
+  /* position: relative;
+  display: inline-block; */
   position: relative;
   display: inline-block;
+  z-index: 1000; 
 }
 
 .hamburger-icon {
@@ -88,7 +91,7 @@ a:hover {
   transition: all 0.3 ease-in-out;
 }
 
-.menu-links {
+/* .menu-links {
   position: absolute;
   top: 100%;
   right: 0;
@@ -97,7 +100,20 @@ a:hover {
   max-height: 0;
   overflow: hidden;
   transition: all 0.3 ease-in-out;
+} */
+ .menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: 100vw;
+  z-index: 999; /* Ensures it's above all other content */
+  display: none;
+  flex-direction: column;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 
 .menu-links a {
   display: block;
@@ -115,7 +131,8 @@ a:hover {
 
 
 .menu-links.open {
-  max-height: 300px;
+  /* max-height: 300px; */
+   display: flex;
 }
 
 .hamburger-icon.open span:first-child {
@@ -155,6 +172,9 @@ section {
   display: flex;
 }
 
+body.menu-open {
+  overflow: hidden;
+}
 
 .section__pic-container {
   display: flex;

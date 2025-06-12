@@ -8,24 +8,28 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
 
-
     <script>
+      // function toggleMenu() {
+      //   const menu = document.querySelector(".menu-links");
+      //   const icon = document.querySelector(".hamburger-icon");
+      //   menu.classList.toggle("open");
+      //   icon.classList.toggle("open");
+      // }
       function toggleMenu() {
         const menu = document.querySelector(".menu-links");
         const icon = document.querySelector(".hamburger-icon");
         menu.classList.toggle("open");
         icon.classList.toggle("open");
+        document.body.classList.toggle("menu-open"); // Prevent scroll underneath
       }
     </script>
-
-    
   </head>
   <body>
     <!-- ------------------NAVBAR------------------------------ -->
     <nav id="desktop-nav">
       <div class="logo">
-  <img src="assets/logo2.png" alt="Logo" class="logo-img" />
-</div>
+        <img src="assets/logo2.png" alt="Logo" class="logo-img" />
+      </div>
       <div>
         <!-- Desktop -->
         <ul class="nav-links">
@@ -38,10 +42,10 @@
         </ul>
       </div>
     </nav>
-    <nav id="hamburger-nav">
-     <div class="logo">
-  <img src="assets/logo2.png" alt="Logo" class="logo-img" />
-</div>
+    <!-- <nav id="hamburger-nav">
+      <div class="logo">
+        <img src="assets/logo2.png" alt="Logo" class="logo-img" />
+      </div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -53,26 +57,24 @@
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#certificates" onclick="toggleMenu()">Certificates</a></li>
+          <li>
+            <a href="#certificates" onclick="toggleMenu()">Certificates</a>
+          </li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
       </div>
-    </nav>
+    </nav> -->
     <!-- ----------------ABOUT SECTION--------------------------------- -->
     <section id="about">
       <p class="section__text__p1">
-        Aspiring Full-Stack Web Developer | MERN Stack | Flutter | CSE Graduate-24
+        Aspiring Full-Stack Web Developer | MERN Stack | Flutter | CSE
+        Graduate-24
       </p>
       <h1 class="title"><span class="dynamic-title" id="name-about"></span></h1>
 
       <div class="section-container">
         <div class="section__pic-container">
-
-          <img
-            src="./assets/pp.jpg"
-            alt="Profile picture"
-            class="about-pic"
-          />
+          <img src="./assets/pp.jpg" alt="Profile picture" class="about-pic" />
         </div>
         <div class="about-details-container">
           <div class="about-containers">
@@ -110,9 +112,6 @@
             </p>
           </div>
           <div class="btn-container">
-
-            
-
             <button
               class="btn btn-color-1"
               onclick="window.open('./assets/CV.pdf')"
@@ -127,7 +126,6 @@
             </button>
           </div>
         </div>
-        
       </div>
       <img
         src="./assets/arrow.png"
