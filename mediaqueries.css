@@ -141,4 +141,17 @@
     height: 60px;
     /* margin-bottom: 0.5rem; */
   }
+  .section__pic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .about-pic {
+    max-width: 80%;
+    height: auto;
+    display: block;
+  }
 }
