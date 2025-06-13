@@ -289,8 +289,7 @@ body.menu-open {
 }
 
 .about-pic {
-  border-radius: 10rem;
-  height: 80%;
+  border-radius: 15rem;
 }
 
 .arrow {
@@ -299,7 +298,7 @@ body.menu-open {
   bottom: 2.5rem;
 }
 
-.details-container {
+/* .details-container {
   padding: 1.5rem;
   flex: 1;
   background: white;
@@ -307,7 +306,7 @@ body.menu-open {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
-}
+} */
 
 .section-container {
   gap: 4rem;
@@ -326,6 +325,7 @@ body.menu-open {
   margin-top: 50px;
 }
 
+
 .experience-sub-title {
   color: rgb(85, 85, 85);
   font-weight: 600;
@@ -340,7 +340,7 @@ body.menu-open {
 .experience-sub-title2 {
   color: rgb(85, 85, 85);
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: 0.9rem;
   margin-bottom: 2rem;
 }
 
@@ -483,4 +483,68 @@ footer p {
 .logo-img:hover {
   transform: scale(1.05);
   cursor: pointer;
+}
+/* Vertical stack for EXPERIENCE */
+.experience-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Horizontal stack for SKILLS */
+.skills-stack {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* General styling for both sections */
+.details-container {
+  background: transparent;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  border: 1px solid #5f5f5f;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+.experience-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  align-items: stretch;
+}
+
+.experience-container {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.experience-headings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience-bullets-container{
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  padding-left: 3%;
+  justify-content: flex-start;
 }
