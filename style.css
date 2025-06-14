@@ -99,11 +99,12 @@ a:hover {
 
 
 section {
-  padding: 4rem 10rem;
+  padding-top: 4vh;
+  height: 100vh;
+  margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
 }
-
 
 .section-container {
   display: flex;
@@ -466,9 +467,7 @@ footer p {
   border-radius: 1rem;
   border: 1px solid #ccc;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  
 }
-
 
 .experience-headings {
   display: flex;
@@ -487,7 +486,6 @@ footer p {
   gap: 2.5rem;
   padding-left: 3%;
   justify-content: flex-start;
-  
 }
 .experience-column {
   display: flex;
@@ -521,6 +519,7 @@ footer p {
 }
 
 .skills-containers::-webkit-scrollbar-thumb {
+  background: #ccc;
   border-radius: 10px;
 }
 
@@ -540,7 +539,7 @@ footer p {
   transform: scale(1.08); /* slightly increases size */
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15); /* stronger shadow */
   z-index: 2; /* brings it above other cards */
-  
+  background-color: rgba(237, 237, 237, 0.514);
 }
 
 article:hover .icon {
@@ -572,13 +571,7 @@ article:hover .icon {
   justify-content: center;
   gap: 2rem;
   padding: 1rem;
+  flex-wrap: wrap;          /* allow wrapping if needed */
 }
-#projects .about-containers {
-  display: flex;
-  flex-direction: row;      /* Horizontal by default */
-  flex-wrap: nowrap;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem;
-}
+
 
