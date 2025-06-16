@@ -564,14 +564,12 @@ article:hover .icon {
   animation-delay: var(--delay, 0s);
 }
 
+
 #certificates .about-containers {
   display: flex;
-  flex-direction: row;      /* Horizontal by default */
+  flex-direction: column;      /* Horizontal by default */
   flex-wrap: nowrap;
   justify-content: center;
   gap: 2rem;
   padding: 1rem;
-  flex-wrap: wrap;          /* allow wrapping if needed */
 }
-
-
